@@ -14,10 +14,10 @@ To parse the JSON feed from the provided source I used json_serializable to gene
 
 
 Sources: 
-I used the following YouTube video for help with setting up the network service to retrieve the JSON feed: https://www.youtube.com/watch?v=hz2LQ43muio
-I referenced a personal side project for help with setting up `home_controller.dart` and how to use the `Obx()` widget properly for state management.
-I used `get_cli` to generate boilerplate code for the individual pages but all functionality was done on my own.
-Here are all of the dependencies used in this project seen in `pubspec.yaml`:
+- I used the following YouTube video for help with setting up the network service to retrieve the JSON feed: https://www.youtube.com/watch?v=hz2LQ43muio
+- I referenced a personal side project for help with setting up `home_controller.dart` and how to use the `Obx()` widget properly for state management.
+- I used `get_cli` to generate boilerplate code for the individual pages but all functionality was done on my own.
+- Here are all of the dependencies used in this project seen in `pubspec.yaml`:
 ```
 dependencies: 
   cupertino_icons: ^1.0.2

@@ -5,6 +5,7 @@ import '../../../data/services/character_network_service.dart';
 
 class HomeController extends GetxController {
   Rx<List<Character>> characters = Rx<List<Character>>([]);
+  Rx<int> selectedCharacterIndex = Rx<int>(0);
 
   @override
   Future<void> onInit() async {
@@ -26,21 +27,21 @@ class HomeController extends GetxController {
 
   void doSearch(String searchString) async {
     CharacterNetworkService characterNetworkService = CharacterNetworkService();
-    if(searchString.isEmpty){
+    if (searchString.isEmpty) {
       characters.value = await characterNetworkService.fetchCharacters();
-    }
-    else {
+    } else {
       characters.value = characters.value
           .where((element) =>
-      element.firstUrl
-          .toLowerCase()
-          .contains(searchString.toLowerCase()) ||
-          element.description
-              .toLowerCase()
-              .contains(searchString.toLowerCase()))
+              element.firstUrl
+                  .toLowerCase()
+                  .contains(searchString.toLowerCase()) ||
+              element.description
+                  .toLowerCase()
+                  .contains(searchString.toLowerCase()))
           .toList();
     }
   }
+
   String getCharacterName(String firstUrl) {
     return firstUrl
         .substring(firstUrl.lastIndexOf('/') + 1)

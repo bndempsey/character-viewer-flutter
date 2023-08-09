@@ -22,9 +22,10 @@ class CharacterDetailView extends GetResponsiveView<CharacterDetailController> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.network(
-                    'https://duckduckgo.com${Get.arguments['imageUrl']}',
-                  errorBuilder:  (context, object, trace) {
-                      return Image.network('https://www.clipartmax.com/png/small/64-642139_transparent-doughnut-simpsons-donut-png.png');
+                  'https://duckduckgo.com${Get.arguments['imageUrl']}',
+                  errorBuilder: (context, object, trace) {
+                    return Image.network(
+                        'https://www.clipartmax.com/png/small/64-642139_transparent-doughnut-simpsons-donut-png.png');
                   },
                 )
               ],
@@ -32,16 +33,19 @@ class CharacterDetailView extends GetResponsiveView<CharacterDetailController> {
             const SizedBox(height: 16),
             Row(
               children: [
-                Expanded(child: Padding(
+                Expanded(
+                    child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(Get.arguments['description'], style: Get.textTheme.titleLarge,),
+                  child: Text(
+                    Get.arguments['description'],
+                    style: Get.textTheme.titleLarge,
+                  ),
                 )),
               ],
             ),
           ],
         ),
       ),
-
     );
   }
 }

@@ -19,5 +19,5 @@ class Character {
   });
 
   factory Character.fromJson(Map<String, dynamic> json) =>
-    _$CharacterFromJson(json);
+      _$CharacterFromJson(json);
 }

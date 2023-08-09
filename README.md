@@ -1,4 +1,4 @@
-# simpsons-viewer-flutter
+# character-viewer-flutter
 #Author: Benjamin Dempsey
 
 For this project, I used GetX to handle state management and I followed the provided GetX architecture.
